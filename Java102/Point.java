@@ -39,9 +39,12 @@ public class Point {
     } 
     // Practice 2) Angles 
     public double angle(){
+        //.atan only applies to positive
         double Radians = Math.atan2(y, x);
         double Degrees = Math.toDegrees(Radians);
         double finalRadians = Math.toRadians(Degrees);
+
+        // u can also return degrees; but it asked for math.toradians as well 
         return finalRadians;
     }
 
