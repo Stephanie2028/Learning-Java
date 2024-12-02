@@ -24,4 +24,17 @@ public class RightTriangle implements Shape {
         return "RightTriangle[base=" + base + ", height=" + height + "]";
     }
 
+    public static boolean similar(RightTriangle triangle1, RightTriangle triangle2) {
+        double hypotenuse1 = Math.sqrt(triangle1.base * triangle1.base + triangle1.height * triangle1.height);
+        double hypotenuse2 = Math.sqrt(triangle2.base * triangle2.base + triangle2.height * triangle2.height);
+        
+        boolean ratioHypotenuse = hypotenuse1 == hypotenuse2;
+        boolean ratioHeight = triangle1.height == triangle2.height;
+        boolean ratioBase = triangle1.base == triangle2.base;
+
+        return ratioBase == ratioHeight && ratioHeight == ratioHypotenuse;
+
+
+    }
+
 }
